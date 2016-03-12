@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Submit UVA</title>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+window.onload = function() {
+	var probdata = window.location.search.substring(1).split("&");
+	$("#probnum").val( probdata[0] );
+	$("#title").text( probdata[0] + " - " + decodeURI(probdata[1]) );
+}
+</script>
+</head>
+
+<body>
+	<h3 id="title"></h3>
+	<form id="submitForm" action="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=25&amp;page=save_submission" method="post" enctype="multipart/form-data">
+		<input id="probnum" type="hidden" name="localid" size="6" />
+		<input type="radio" name="language" value="1" /> ANSI C
+		<input type="radio" name="language" value="2" /> JAVA
+		<input type="radio" name="language" value="3" checked="true" /> C++
+		<input type="radio" name="language" value="4" /> PASCAL
+		<input type="radio" name="language" value="5" checked="true" /> C++11
+		<br/>
+		<textarea name="code" rows="20" cols='80' placeholder="Paste your code here..."></textarea>
+		<br/>
+		<input type="submit" value="Submit"/>
+		<input type="reset" value="Reset"/>
+	</form>
+	<br>
+	Note: 請確認您已登入UVA，如果還沒登入請使用上方UVA連結
+</body>
+
+</html>

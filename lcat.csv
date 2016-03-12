@@ -1,0 +1,675 @@
+100,1,<a href="http://luckycat.kshs.kh.edu.tw/homework/q100.c.htm">sample code</a>,brute force
+101,2,,simulation
+102,2,,brute force
+103,3,LIS,DP
+104,3,DP,graph
+105,3,,
+106,3,,math
+107,2, ,math
+108,3,,DP
+111,3,LIS,DP
+112,3,,DFS, parser
+113,2,,math
+115,3,,graph
+116,3,from right to left,DP
+118,2,,simulation
+120,3,,recursion
+122,3,,brute force
+124,3,,permutation, graph
+127,2,stack,simulation
+128,3,注意overflow,brute force
+130,2,,simulation
+131,3,,simulation, combination
+133,3,,simulation
+136,3,,DP
+138,3,,math
+141,3,STL: map,game
+142,3,,simulation
+143,3,,geometry
+145,2,,brute force
+146,3,,permutation
+147,3,注意輸入浮點數誤差,DP
+151,2,Josephus problem,ad hoc
+153,3,,permutation
+155,2,,simulation
+160,2,,prime
+161,3,,brute force
+166,3,,DP
+167,3,similar to Q750,DFS
+170,2,,simulation
+190,3,similar to Q438,math
+191,3,,Geometry
+193,3,dfs,graph
+195,3,,permutation
+200,3,toplogical sort,graph
+201,3,,ad hoc
+202,3,,array
+216,3,dfs,permutation
+245,3,linked list,brute force
+247,3,Strongly Connected Component,graph
+253,2,,simulation
+254,3,,math, big number
+256,2,,array
+257,3,only check palindromes with length 3,4,brute force
+259,3,dfs || maxflow,graph
+263,2,string,ad hoc
+264,2,,
+270,3,,math
+271,3,類似刮號匹配,stack
+272,1,,brute force
+273,3,,Geometry + graph
+275,2,,brute force
+290,3,,big number
+291,3,,recursion
+294,2,,prime
+300,2,,ad hoc
+305,3,,
+306,3,,simulation
+307,4,,dfs
+311,3,,greedy
+315,3,,graph
+332,3,,
+333,3,,
+336,3,BFS,graph
+340,2,,brute force
+343,2,,brute force
+348,3,,DP
+350,2,,array
+353,2,C++ STL map,string palindrome
+355,2,,brute force
+356,2,,
+357,2,,DP
+369,3,,array
+374,3,<a href="http://luckycat.kshs.kh.edu.tw/homework/h374.htm">hint</a>,math, recursion
+375,3,,math
+378,3,,math, precision
+382,2,,
+386,2,,
+389,2,,brute force
+392,2,,brute force
+402,2,,simulation
+406,2,,prime
+409,3, ,string
+412,2,,brute force
+417,3,BFS,permutation
+424,3, ,string
+429,3,BFS,
+435,3,,DP
+437,3,LIS,DP
+438,3,參考Q378,math
+439,3,,BFS
+441,3, DFS,Backtracking
+442,3,,stack
+443,3,like Q136,DP
+445,2, ,string
+446,2,,
+451,3,like 10315,simulation
+455,3,,string
+458,1,,brute force
+459,3,,graph
+465,3,,brute force
+471,3,,string
+474,3,,math
+476,1,,
+477,1,,math
+478,2,,math
+481,4,LIS with n*log(n),DP
+482,2,,array
+483,2,,string
+484,2,,array
+485,3,,bignumber
+486,3,,brute force
+488,1,,
+489,3,,string
+490,2,,string
+492,2,,string
+493,3,number theory,math
+494,1,,string
+495,3,,bignumber
+496,3,,
+497,3,LIS,DP
+498,2,,brute force
+514,3,,stack
+516,2,,prime factor
+52,3,,recursion
+530,2,The same as Q369,array
+532,3,BFS,graph
+534,3,shortest path,graph
+536,3,,tree
+537,3,,string
+541,2,,brute force
+543,2,,
+544,3,shortest path,graph
+548,3,Similar to Q536,tree
+555,2,,simulation
+557,4,,math
+558,3,Bellman-Ford, or dfs,graph
+562,3,,DP
+565,4,bitwise operations,brute force
+568,2,,
+571,4,BFS,graph
+572,3,,recursion
+573,2,,simulation
+574,3,,recursion
+576,2,,brute force
+579,1,,
+580,3,combination,math
+583,3,,prime
+587,2,,brute force
+591,1,,array
+598,3,Similar to Q441 Lotto,DFS
+602,2,,brute force
+608,2,,simulation
+612,2,,sorting
+615,3,,graph
+619,3,,big number
+623,3,,bignumber
+624,3,,DP
+626,3,,brute force or dfs
+639,3,,dfs
+640,3,,brute force
+642,2,string,brute force
+661,2,,brute force
+665,2,,simulation
+668,3,,math
+673,2,stack,data structure
+674,3,,DP
+679,2,,tree
+681,3,convex hull,computational geometry
+686,2,,prime
+694,2,like Q100,brute force
+699,3,,tree
+700,2,,brute force
+704,4,,BFS
+706,3,,brute force
+713,3,,big number
+725,3,,
+727,2,,stack
+729,2,,math
+740,2,,brute force
+748,3,,bignumber
+750,3,,recursion
+755,3,,sort
+759,3,,ad hoc
+762,3,BFS,graph
+763,3,,
+793,3,,graph
+820,3,max flow,graph
+825,2,,DP
+834,2,,math
+836,3,,DP
+838,4,,backtracking
+845,4,,permutation
+846,2,,math
+847,3,,game
+855,2,sort,math
+861,3,,backtracking
+880,2,,math
+884,3,DP,prime
+903,3,,grid
+907,3,,DP or recursion
+908,4,Minimum-Spanning-Tree,graph
+913,1,,
+989,3,,backtracking
+993,2,,greedy
+1225,2,brute force,ad hoc
+10000,3,,graph
+10002,3,,computational geometry
+10003,3,Similar to Q348,DP
+10004,3,DFS,graph
+10006,3,參考Q374,math
+10007,4,Similar to Q10303,math, bignumber
+10008,2,,string
+10010,2,,array
+10014,2,,math
+10015,2,,prime
+10017,3,,recursion
+10018,1,,
+10023,4,,bignumber
+10025,3,注意k=0,math
+10026,3,,sorting
+10032,3,,greedy
+10034,3,Minimum Spanning Tree,graph
+10035,1,,array
+10036,3,math (mod),DP
+10037,4,http://www.plastelina.net/games/game3.html,<a href="http://luckycat.kshs.kh.edu.tw/homework/h10037.txt">math</a>
+10038,1,,brute force
+10041,2,,math
+10042,3,,
+10048,3,all shortest path,graph
+10049,3,,DP + binary search
+10055,1,,
+10056,2,,math
+10057,2,median,math
+10062,1,,
+10063,3,,recursion
+10066,3,LCS,DP
+10067,3,,graph
+10071,1,,physics
+10074,3,參考Q108,DP
+10078,3,convex hull,computational geometry
+10079,3,use long long,math
+10080,4,bipartite matching, max flow,graph
+10081,3,,DP
+10082,1,,simulation
+10083,3,,big number
+10090,2,gcd,brute force
+10093,3,,math
+10098,3,Similar to Q195,permutation
+10099,3,shortest path,graph
+10102,3,BFS,graph
+10104,3,,math
+10105,2,,math
+10106,2,,bignumber
+10107,1,,array
+10110,3,,math
+10112,2,,math
+10120,3,,DFS + math
+10125,4,,search
+10126,3,similar to 10226,tree
+10127,3,,math
+10128,3,DP, 注意：R,L可能>N,combination math
+10129,3,Euler Path,graph
+10130,3,Knapsack Problem,DP
+10131,3,,DP
+10137,3,,brute force
+10139,3,,prime factor
+10140,3,,prime
+10141,1,,brute force
+10142,2,,brute force
+10147,3,MST，與10397相同,graph
+10150,4,qsort, BFS,graph
+10152,3,,sort
+10154,3,,DP
+10157,4,dp,math
+10161,2,,
+10162,3,,math
+10164,3,,backtracking
+10165,3,2進位數字系統,math
+10167,2,,geometry
+10168,3,Goldbach`s Conjecture ,prime
+10170,3,,math
+10174,2,,prime
+10176,3,,math
+10179,3,,math
+10182,3,,
+10183,3,,bignumber
+10188,2,請愛用gets()輸入,brute force
+10189,2,,brute force
+10191,3,與Q105相似,
+10192,4,Longest Common Subsequence,DP
+10193,2,GCD,
+10195,3,,math
+10196,2,,brute force
+10199,3,connected component,graph
+10200,2,,prime
+10202,4,dfs,math
+10209,1,,math
+10210,3,,math
+10212,3,,math
+10213,4,,math, bignumber
+10215,3,,math
+10219,2,,math
+10220,3,,bignumber
+10222,1,string,brute force
+10223,2,,math
+10226,3,C++ stl map,binary-tree, hash
+10227,2,,set
+10229,3,,math
+10232,3,,math
+10233,3,,math
+10235,2,,prime
+10237,4,,DP
+10242,2,,geometry
+10245,4,,
+10253,4,Combinatorial Math,DP
+10254,3,,DP
+10257,3,,math
+10258,2,,brute force
+10259,4,,DP or BFS
+10268,2,Do not worry about Overflow.,brute force
+10271,3,,DP
+10276,3,,
+10282,3,,search
+10283,3,,math
+10284,2,,brute force
+10285,3,,recursion
+10286,2,,math
+10287,2,,math
+10289,3,,geometry
+10290,4,,math
+10295,2,,string
+10296,4,Chinese Postman Problem,graph
+10297,3,,math
+10298,2,Similar to Q455,brute force
+10299,3,Similar to Q10179,math
+10300,1,,
+10302,2,,math
+10303,4,,math, bignumber
+10305,3,,graph
+10310,2,,brute force
+10311,3,,prime
+10313,4,DP,math
+10315,3,,simulation
+10323,2,n可以<0,brute force
+10324,3,,array
+10325,3,LCM,math
+10326,2,,math
+10327,2,,array
+10328,3,,DP, bignumber
+10329,3,,math + big number
+10330,4,max flow,graph
+10334,3,,math, bignumber
+10336,3,,recursion
+10338,3,,prime factor
+10340,1,,string
+10342,3,shortest path,graph
+10344,3,,recursion
+10345,3,,math
+10346,2,,
+10359,3,,math+big number
+10361,2,,string
+10364,4,DFS,
+10365,2,,brute force
+10368,3,,game
+10370,1,array,brute force
+10374,3,,
+10375,3,,math
+10377,2,,simulation
+10386,3,,math
+10391,3,binary search,brute force
+10392,3, ,prime
+10393,3,,simulation
+10394,3,,prime
+10397,4,Minimal Spanning Tree,graph
+10400,4,,DFS
+10404,3,,game theory
+10405,3,The same as Q10192,DP
+10407,3,GCD,math
+10408,3,,math
+10409,2,,simulation
+10410,2,,tree
+10418,5,Maximum bipartite matching, BFS,
+10432,2,sin,math
+10433,4,pre-caculation,math + big number
+10443,2,,simulation
+10450,3,,math
+10465,3,,brute force
+10469,2,,
+10473,1,%X,brute force
+10474,3,counting sort,brute force
+10484,3,注意N=0, D!=0,因數分解
+10487,3,binary search,brute force
+10489,2,注意 overflow,brute force
+10491,2,,math
+10493,2,tree,math
+10494,2,注意 overflow,brute force
+10496,3,Similar to Q216,dfs
+10497,4,,math + big number
+10499,1,,math
+10500,2,,simulation
+10502,3,,DP
+10515,2,,brute force
+10518,3,find the repeat circle length,brute force
+10519,3,,math + big number
+10527,3,greedy,big number
+10530,2,binary search,brute force
+10533,3,,prime
+10534,4,,LIS
+10539,3,,prime
+10549,4,,dfs
+10550,1,,brute force
+10551,3,,big number
+10563,3,,Greedy
+10564,4,,DP
+10566,3,逼近法,math
+10573,2,,math
+10578,3,DP + game,graph
+10583,3,Union-Find,graph
+10589,1,,geometry
+10591,2,,brute force
+10603,3,,DP
+10608,3,set union,graph
+10620,2,,math
+10622,2,因數分解,number theorem
+10624,3,pre_caculation,backtracking
+10625,2,,DP
+10627,3,,math
+10633,2,,math
+10635,3,LIS,dp
+10637,3,,dfs
+10649,3,,math
+10655,4,,math
+10664,3,,DP
+10673,1,,brute force
+10678,3,<a href="http://luckycat.kshs.kh.edu.tw/ellipse.gif">橢圓 </a>,math
+10680,3,,prime
+10684,2,,DP
+10689,3,Similar to Q10229,math
+10693,3,物理,math
+10696,1,,
+10699,2,因數分解,
+10700,3,注意data type,math
+10701,3,the same with Q536,tree
+10702,3,,DP
+10706,2,注意邊界條件,brute force
+10709,3,,computational geometry
+10714,2,,math
+10730,2,,permutation
+10739,3,,DP
+10759,3,math,DP
+10763,3,,sort
+10771,2,,math
+10776,2,dfs,combination
+10780,3,因數分解,prime
+10783,1,,brute force
+10784,2,,math
+10789,1,,prime
+10790,2,,math
+10791,3,因數分解, 注意N=2147483647,質數
+10795,3,math,recursion
+10800,2,,brute force
+10801,3,shortest path,graph
+10810,3,merge sort,sort
+10812,1,,
+10815,3,,tree
+10829,5,Longest common prefix,string
+10830,2,,math
+10856,3,dp,prime
+10858,3,,recursion
+10871,2,prime number,brute force
+10878,1,ascii code,brute force
+10880,2,prime factor,math
+10881,3,,sort
+10883,3,binomial coefficients , log,math
+10891,3,,DP
+10892,2,factor,math
+10898,4,,DP
+10903,1,,brute force
+10905,2,qsort,sort
+10911,3,,dfs or DP
+10912,3,,recursion + memorization or DP
+10916,2,,math
+10917,4,bfs+dfs,graph
+10918,3,,combinational math
+10919,2,,brute force
+10922,2,,brute force
+10924,1,,prime
+10926,3,dfs,graph
+10929,1,,string
+10949,4,LIS,DP
+10954,3,min heap,heap
+10957,3,,backtracking
+10959,2,bfs,graph
+10961,3,,
+10962,2,,
+10963,1,,
+10976,2,,math
+10986,3,shortest path,graph
+10994,2,,math
+11000,2,,math
+11001,2,,math
+11003,3,,DP
+11005,2,,brute force
+11012,3,,math
+11015,3,shortest path,graph
+11023,4,Generating function,DP or math
+11029,3,,math
+11033,4,dfs,math
+11038,2,,math
+11039,2,,sort
+11045,4,max flow,graph
+11059,1,,brute force
+11069,2,DP,combination math
+11070,2,,parser
+11081,3,,DP
+11084,3,,DFS
+11085,3,,backtracking
+11091,4,Matrix multiplication,math
+11115,2,,大數乘法
+11121,2,奇數、偶數,recursive
+11127,3,,DFS
+11129,3,recursive,math
+11138,4,Maximum bipartite matching,flow
+11150,2,,
+11151,3,,DP
+11152,2,內切圓，外接圓半徑,math
+11157,3,,greedy
+11172,1,,
+11183,4,Directed MST,graph
+11185,1,,
+11187,4,DFS + binary-search also works,DP
+11192,1,,string
+11195,4,,
+11198,4,BFS,graph
+11204,1,,ad hoc
+11207,2,simple math,ad hoc
+11210,4,DFS,backtracking
+11218,3,,brute force
+11219,1,,ad hoc
+11223,2,,string
+11227,2,geometry, math,brute force
+11231,2,,ad hoc
+11233,2,,string
+11235,3,,data structure
+11236,2,,brute force
+11237,3,,math
+11247,2,,ad hoc
+11254,2,,math
+11258,2,,DP
+11260,3,(a*b)%m=((a%m)*(b%m))%m,math
+11286,2,,sort
+11296,2,,math
+11300,4,,math
+11309,2,,string
+11310,2,,DP
+11332,1,,
+11351,3,Josephus problem,recursive, dp
+11352,2,BFS,graph
+11356,2,,ad hoc, date
+11360,2,simulation,ad hoc
+11364,1,,
+11369,1,,
+11371,2,long long,math
+11384,2,bit representation,math
+11398,1,,ad hoc
+11401,2,dp,combinational math
+11407,3,,DP
+11428,2,,ad hoc
+11436,3,,math
+11450,3,,DP
+11456,4,,DP
+11462,2,,sort
+11464,2,brute force,ad hoc
+11479,1,long long,
+11480,3,,dp, math
+11491,3,,greedy
+11494,1,,
+11498,1,,ad hoc
+11503,3,hash, C++ STL map,set union
+11504,3,Strongly Connected Component,graph
+11507,2,,ad hoc
+11513,3,bfs,graph
+11516,3,greedy,binary search
+11520,2,,greedy
+11524,2,內切圓，海龍公式,math
+11526,2,,ad hoc
+11532,3,,greedy
+11541,1,isupper(), isdigitr(),string
+11549,3,set,math
+11550,2,,data structure
+11565,2,3 for loop,ad hoc
+11572,2,map,ad hoc
+11577,1,isupper(), islower(),string
+11579,2,sort,math
+11582,3,big mod,math
+11614,2,,math
+11616,3,,ad hoc
+11661,1,,
+11683,3,,ad hoc
+11687,1,,
+11689,1,,
+11714,2,decision tree,math
+11728,2,factor,math
+11730,2,BFS,
+11743,1,,ad hoc
+11764,1,,ad hoc
+11818,4,BFS,game, DP
+11838,3,Strongly Connected Component,graph
+11875,1,,ad hoc
+11876,2,,binary search
+11879,1,,string
+11908,3,greey + dp,sort
+11909,2,三角函數,math
+11936,1,,ad hoc
+11942,1,,ad hoc
+11946,2,,string
+11947,2,注意閏年,ad hoc
+11955,2,,math, string
+11956,2,,ad hoc
+11957,3,,DP
+11959,2,,ad hoc
+11960,3,,prime number
+11984,1,,ad hoc
+11986,2,,math
+11987,3,set union,data structure
+11988,3,linked list,data structure
+11991,3,sort, binary search,data structure
+11995,2,simulation stack,queue,priority queue,data structure
+11997,3,C++ STL priority queue,data structure
+12004,2,long long,sort
+12019,1,,ad hoc
+12068,2,gcd,brute force
+12149,1,,ad hoc
+12195,1,,string
+12208,2,,math
+12289,1,,ad hoc
+12293,3,DP,game
+12405,1,greedy,ad hoc
+12406,2,try all combination,ad hoc
+12414,2,,ad hoc
+12416,2,,ad hoc
+12439,1,,ad hoc
+12442,3,,graph
+12455,2,,DP
+12459,1,,ad hoc
+12461,2,,math
+12468,1,,ad hoc
+12602,1,,
+12650,1,1D array,
+12694,2,,greedy
+11260,3,(a*b)%m=((a%m)*(b%m))%m,math
+11532,3,,greedy
+10776,2,dfs,combination
+11192,1,,string
+11115,2,,大數乘法
+11157,3,,greedy
+12694,2,,greedy
+10871,2,prime number,brute force
+12428,3,greedy,math
+1213,3,,DP
+11561,3,BFS,Graph
+1200,2,,string processing
+11368,4,binary search,sort greedy
+11246,3,,math
+12347,2,tree,data structure

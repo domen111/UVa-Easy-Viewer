@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>UVA Easy Viewer</title>
+<script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+var probnum,probid,probtitle;
+var userId;
+var uvaUrl,lcatUrl;
+var hasLcat = true;
+window.onload = function() {
+	var urlGet = decodeURIComponent(window.location.search.substring(1)).split("/");
+	probnum = urlGet[0].replace(/[^0-9]/g,"");
+	userId = urlGet[1];
+	$.getJSON("http://uhunt.felix-halim.net/api/p/num/"+probnum, loadProb);
+	$.get("lcat.csv", loadLcatDetail);
+	$("title").text(probnum+" - UVA Easy Viewer");
+	$("#google").attr("href","http://www.google.com/search?q=uva+"+probnum);
+	if(userId) $("#myUhunt").attr("href","http://uhunt.felix-halim.net/id/"+userId);
+	$("#myUdebug").attr("href","http://www.udebug.com/UVa/"+probnum);
+	$(window).resize(windowSizeChange);
+	windowSizeChange();
+}
+function loadProb(probdata) {
+	probtitle = probdata.title;
+	probid = probdata.pid;
+	
+	uvaUrl = "http://uva.onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
+	if(hasLcat) lcatUrl = "http://luckycat.kshs.kh.edu.tw/homework/q"+probnum+".htm";
+	
+	$("#uva").attr("href","http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
+	
+	if(hasLcat) view("lcat");
+	else view("uva");
+	
+	setInterval(function(){
+		$("#keepLogin").attr("src","http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25");
+	},10*60*1000);
+	if(userId)
+		refreshVerdict();
+}
+function windowSizeChange(){
+	$("#content").height( $(window).height() - $("#content").position().top - 10 );
+}
+function view(type) {
+	$("#contentFrame").attr("src",this[type+"Url"]);
+}
+function showzj() {
+	$("#zjsearch").attr("value",probnum);
+	$("#zjform").submit();
+}
+function setOpenPage() {
+	$("#openPage").attr("href", $("#contentFrame").attr("src") );
+}
+function submit() {
+	//$("#contentFrame").attr("src","submit.html?"+probnum+"&"+encodeURI(probtitle));
+	$("#contentFrame").attr("src","http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=submit_problem&problemid="+probid+"&category=");
+}
+function loadLcatDetail(data) {
+	data = data.split("\n");
+	for(var i in data) {
+		var line = data[i].split(",");
+		if(line[0] == probnum) {
+			var starcount = line[1];
+			var star = "";
+			for(var j=0;j<starcount;j++)
+				star += "★";
+			$("#star").html(star); $("#star_hide").hide()
+			$("#hint").hide().html(line[2]);
+			$("#way").hide().html(line[3]);
+			hasLcat = true;
+			return;
+		}
+	}
+	hasLcat = false;
+	lcatUrl = "nolcat.html";
+	view("uva");
+}
+function showHide(type) {
+	if($("#"+type).is(':visible')) {
+		$("#"+type).hide("slow");
+		$("#"+type+"_hide").show("slow");
+	} else {
+		$("#"+type).show("slow");
+		$("#"+type+"_hide").hide("slow");
+	}
+}
+function refreshVerdict() {
+	console.log("refresh");
+	var verdict = {0: " - In queue - ", 10: "Submission error", 15: "Can't be judged", 20: "In queue", 30: "Compile error", 35: "Restricted function", 40: "Runtime error", 45: "Output limit", 50: "Time limit", 60: "Memory limit", 70: "Wrong answer", 80: "PresentationE", 90: '<span style="color:#00AA00; font-weight:bold;">Accepted</span>'};
+	$.getJSON("http://uhunt.felix-halim.net/api/subs-pids/"+userId+"/"+probid+"/0?nocache="+Math.random(),function(data){
+		data = data[userId].subs;
+		if(data.length > 0) {
+			var lastsub = data[0];
+			for(var i in data)
+				if(data[i][4]>lastsub[4])
+					lastsub = data[i];
+			var change = ($("#verdict").html() != verdict[lastsub[2]] && $("#verdict").html() != "" && lastsub[2] != 0);
+			$("#verdict").html(verdict[lastsub[2]]);
+			if(change) {
+				$("#verdict").css({background:"red","font-size":"30pt",width:"300"});
+				$("#verdict").effect("bounce",{distance:1000,direction:"right"} , 3000, function(){
+					$("#verdict").css({background:"","font-size":"",width:""});
+				});
+			}
+			verdictCount = data.length;
+		}
+		setTimeout(refreshVerdict,1000);
+	});
+}
+</script>
+</head>
+
+<body>
+	<div id="header">
+		<button onclick="view('uva');">UVa</button>
+		<button onclick="view('lcat');">Lucky Cat</button>
+		<button onclick="showzj();">Zero Judge</button>
+		<button onclick="submit();">Submit</button>
+		<a id="openPage" onclick="setOpenPage();" href="#">開啟此頁</a>&nbsp;
+		<a id="google" href="">Google搜尋</a>
+		<a id="uva" href="">UVa</a>
+		<a id="myUhunt" href="http://uhunt.felix-halim.net/">uHunt</a>
+		<a id="myUdebug" href="http://www.udebug.com/">uDebug</a>
+		<a href="https://sites.google.com/site/domenprg/uva-easy-viewer">About</a>
+		&nbsp;&nbsp;&nbsp;
+		<span id="star" style="color:red;" ondblclick="showHide('star');"></span><span id="star_hide" onclick="showHide('star');">難度</span>&nbsp;
+		<span id="hint" style="color:red;" ondblclick="showHide('hint');"></span><span id="hint_hide" onclick="showHide('hint');">提示</span>&nbsp;
+		<span id="way" style="color:red;" ondblclick="showHide('way');"></span><span id="way_hide" onclick="showHide('way');">解題方向</span>&nbsp;&nbsp;&nbsp;
+		<span id="verdict" style="display:inline-block;width:auto;"></span>
+	</div>
+	<div id="content">
+		<iframe id="contentFrame" name="contentFrame" frameborder="1" height="100%" width="100%"></iframe>
+	</div>
+	<div hidden>
+		<iframe id="keepLogin" width="0" height="0"></iframe>
+		<form id="zjform" method="post" target="contentFrame" action="http://zerojudge.tw/Problems">
+			<input id="zjsearch" type="hidden" name="searchword"></input>
+		</form>
+	</div>
+</body>
+
+</html>
