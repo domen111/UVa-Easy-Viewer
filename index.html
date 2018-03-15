@@ -15,7 +15,7 @@ window.onload = function() {
 	var urlGet = decodeURIComponent(window.location.search.substring(1)).split("/");
 	probnum = urlGet[0].replace(/[^0-9]/g,"");
 	userId = urlGet[1];
-	$.getJSON("http://uhunt.felix-halim.net/api/p/num/"+probnum, loadProb);
+	$.getJSON("http://uhunt.onlinejudge.org/api/p/num/"+probnum, loadProb);
 	$.get("lcat.csv", loadLcatDetail);
 	$("title").text(probnum+" - UVA Easy Viewer");
 	$("#google").attr("href","http://www.google.com/search?q=uva+"+probnum);
@@ -91,7 +91,7 @@ function showHide(type) {
 function refreshVerdict() {
 	console.log("refresh");
 	var verdict = {0: " - In queue - ", 10: "Submission error", 15: "Can't be judged", 20: "In queue", 30: "Compile error", 35: "Restricted function", 40: "Runtime error", 45: "Output limit", 50: "Time limit", 60: "Memory limit", 70: "Wrong answer", 80: "PresentationE", 90: '<span style="color:#00AA00; font-weight:bold;">Accepted</span>'};
-	$.getJSON("http://uhunt.felix-halim.net/api/subs-pids/"+userId+"/"+probid+"/0?nocache="+Math.random(),function(data){
+	$.getJSON("http://uhunt.onlinejudge.org/api/subs-pids/"+userId+"/"+probid+"/0?nocache="+Math.random(),function(data){
 		data = data[userId].subs;
 		if(data.length > 0) {
 			var lastsub = data[0];
