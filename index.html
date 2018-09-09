@@ -15,12 +15,12 @@ window.onload = function() {
 	var urlGet = decodeURIComponent(window.location.search.substring(1)).split("/");
 	probnum = urlGet[0].replace(/[^0-9]/g,"");
 	userId = urlGet[1];
-	$.getJSON("http://uhunt.onlinejudge.org/api/p/num/"+probnum, loadProb);
+	$.getJSON("https://uhunt.onlinejudge.org/api/p/num/"+probnum, loadProb);
 	$.get("lcat.csv", loadLcatDetail);
 	$("title").text(probnum+" - UVA Easy Viewer");
-	$("#google").attr("href","http://www.google.com/search?q=uva+"+probnum);
-	if(userId) $("#myUhunt").attr("href","http://uhunt.felix-halim.net/id/"+userId);
-	$("#myUdebug").attr("href","http://www.udebug.com/UVa/"+probnum);
+	$("#google").attr("href","https://www.google.com/search?q=uva+"+probnum);
+	if(userId) $("#myUhunt").attr("href","https://uhunt.onlinejudge.org/id/"+userId);
+	$("#myUdebug").attr("href","https://www.udebug.com/UVa/"+probnum);
 	$(window).resize(windowSizeChange);
 	windowSizeChange();
 }
@@ -28,16 +28,15 @@ function loadProb(probdata) {
 	probtitle = probdata.title;
 	probid = probdata.pid;
 	
-	uvaUrl = "http://uva.onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
+	uvaUrl = "https://uva.onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
 	if(hasLcat) lcatUrl = "http://luckycat.kshs.kh.edu.tw/homework/q"+probnum+".htm";
 	
-	$("#uva").attr("href","http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
+	$("#uva").attr("href","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
 	
-	if(hasLcat) view("lcat");
-	else view("uva");
+	view("uva");
 	
 	setInterval(function(){
-		$("#keepLogin").attr("src","http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25");
+		$("#keepLogin").attr("src","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25");
 	},10*60*1000);
 	if(userId)
 		refreshVerdict();
@@ -57,7 +56,7 @@ function setOpenPage() {
 }
 function submit() {
 	//$("#contentFrame").attr("src","submit.html?"+probnum+"&"+encodeURI(probtitle));
-	$("#contentFrame").attr("src","http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=submit_problem&problemid="+probid+"&category=");
+	$("#contentFrame").attr("src","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=submit_problem&problemid="+probid+"&category=");
 }
 function loadLcatDetail(data) {
 	data = data.split("\n");
@@ -91,7 +90,7 @@ function showHide(type) {
 function refreshVerdict() {
 	console.log("refresh");
 	var verdict = {0: " - In queue - ", 10: "Submission error", 15: "Can't be judged", 20: "In queue", 30: "Compile error", 35: "Restricted function", 40: "Runtime error", 45: "Output limit", 50: "Time limit", 60: "Memory limit", 70: "Wrong answer", 80: "PresentationE", 90: '<span style="color:#00AA00; font-weight:bold;">Accepted</span>'};
-	$.getJSON("http://uhunt.onlinejudge.org/api/subs-pids/"+userId+"/"+probid+"/0?nocache="+Math.random(),function(data){
+	$.getJSON("https://uhunt.onlinejudge.org/api/subs-pids/"+userId+"/"+probid+"/0?nocache="+Math.random(),function(data){
 		data = data[userId].subs;
 		if(data.length > 0) {
 			var lastsub = data[0];
@@ -123,8 +122,8 @@ function refreshVerdict() {
 		<a id="openPage" onclick="setOpenPage();" href="#">開啟此頁</a>&nbsp;
 		<a id="google" href="">Google搜尋</a>
 		<a id="uva" href="">UVa</a>
-		<a id="myUhunt" href="http://uhunt.felix-halim.net/">uHunt</a>
-		<a id="myUdebug" href="http://www.udebug.com/">uDebug</a>
+		<a id="myUhunt" href="https://uhunt.onlinejudge.org/">uHunt</a>
+		<a id="myUdebug" href="https://www.udebug.com/">uDebug</a>
 		<a href="https://sites.google.com/site/domenprg/uva-easy-viewer">About</a>
 		&nbsp;&nbsp;&nbsp;
 		<span id="star" style="color:red;" ondblclick="showHide('star');"></span><span id="star_hide" onclick="showHide('star');">難度</span>&nbsp;
@@ -137,7 +136,7 @@ function refreshVerdict() {
 	</div>
 	<div hidden>
 		<iframe id="keepLogin" width="0" height="0"></iframe>
-		<form id="zjform" method="post" target="contentFrame" action="http://zerojudge.tw/Problems">
+		<form id="zjform" method="post" target="contentFrame" action="https://zerojudge.tw/Problems">
 			<input id="zjsearch" type="hidden" name="searchword"></input>
 		</form>
 	</div>
