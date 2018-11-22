@@ -32,9 +32,10 @@ function loadProb(probdata) {
 	if(hasLcat) lcatUrl = "http://luckycat.kshs.kh.edu.tw/homework/q"+probnum+".htm";
 	
 	$("#uva").attr("href","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
-	
-	view("uva");
-	
+
+	if(hasLcat) view("lcat");
+	else view("uva");
+
 	setInterval(function(){
 		$("#keepLogin").attr("src","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25");
 	},10*60*1000);
