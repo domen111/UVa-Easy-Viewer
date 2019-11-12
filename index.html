@@ -28,16 +28,16 @@ function loadProb(probdata) {
 	probtitle = probdata.title;
 	probid = probdata.pid;
 	
-	uvaUrl = "https://uva.onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
+	uvaUrl = "https://onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
 	if(hasLcat) lcatUrl = "http://luckycat.kshs.kh.edu.tw/homework/q"+probnum+".htm";
 	
-	$("#uva").attr("href","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
+	$("#uva").attr("href","https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
 
 	if(hasLcat) view("lcat");
 	else view("uva");
 
 	setInterval(function(){
-		$("#keepLogin").attr("src","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25");
+		$("#keepLogin").attr("src","https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=25");
 	},10*60*1000);
 	if(userId)
 		refreshVerdict();
@@ -57,7 +57,7 @@ function setOpenPage() {
 }
 function submit() {
 	//$("#contentFrame").attr("src","submit.html?"+probnum+"&"+encodeURI(probtitle));
-	$("#contentFrame").attr("src","https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=submit_problem&problemid="+probid+"&category=");
+	$("#contentFrame").attr("src","https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=submit_problem&problemid="+probid+"&category=");
 }
 function loadLcatDetail(data) {
 	data = data.split("\n");
