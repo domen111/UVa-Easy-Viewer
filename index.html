@@ -13,7 +13,7 @@ var uvaUrl,lcatUrl;
 var hasLcat = true;
 window.onload = function() {
 	var urlGet = decodeURIComponent(window.location.search.substring(1)).split("/");
-	probnum = (urlGet[0].match(/[0-9]+/g) ?? [0])[0];
+	probnum = (urlGet[0].match(/[0-9]+/g) || [0])[0];
 	userId = urlGet[1];
 	$.getJSON("https://uhunt.onlinejudge.org/api/p/num/"+probnum, loadProb);
 	$.get("lcat.csv", loadLcatDetail);
