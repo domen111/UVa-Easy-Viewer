@@ -4,8 +4,12 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>UVA Easy Viewer</title>
+<!--
 <script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+-->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <script>
 var probnum,probid,probtitle;
 var userId;
@@ -30,6 +34,7 @@ function loadProb(probdata) {
 	
 	uvaUrl = "https://onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
 	if(hasLcat) lcatUrl = "http://luckycat.kshs.kh.edu.tw/homework/q"+probnum+".htm";
+	lcat_mUrl = "http://www3.tcgs.tc.edu.tw/~sagit/luckycat/q"+probnum+".htm";
 	
 	$("#uva").attr("href","https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
 
@@ -47,6 +52,14 @@ function windowSizeChange(){
 }
 function view(type) {
 	$("#contentFrame").attr("src",this[type+"Url"]);
+	if (type == 'lcat')
+	{
+		$("#note").show("slow");
+	}
+	else
+	{
+		$("#note").hide();
+	}
 }
 function showzj() {
 	$("#zjsearch").attr("value",probnum);
@@ -118,6 +131,7 @@ function refreshVerdict() {
 	<div id="header">
 		<button onclick="view('uva');">UVa</button>
 		<button onclick="view('lcat');">Lucky Cat</button>
+		<button onclick="view('lcat_m');">Lucky Cat (Mirror)</button>
 		<button onclick="showzj();">Zero Judge</button>
 		<button onclick="submit();">Submit</button>
 		<a id="openPage" onclick="setOpenPage();" href="#">開啟此頁</a>&nbsp;
@@ -130,6 +144,7 @@ function refreshVerdict() {
 		<span id="star" style="color:red;" ondblclick="showHide('star');"></span><span id="star_hide" onclick="showHide('star');">難度</span>&nbsp;
 		<span id="hint" style="color:red;" ondblclick="showHide('hint');"></span><span id="hint_hide" onclick="showHide('hint');">提示</span>&nbsp;
 		<span id="way" style="color:red;" ondblclick="showHide('way');"></span><span id="way_hide" onclick="showHide('way');">解題方向</span>&nbsp;&nbsp;&nbsp;
+		<span id="note" style="color:red; display:none;">如果 Lucky Cat 沒有回應，請嘗試點擊 Lucky Cat (Mirror)。</span>
 		<span id="verdict" style="display:inline-block;width:auto;"></span>
 	</div>
 	<div id="content">
