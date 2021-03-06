@@ -48,12 +48,9 @@ function windowSizeChange(){
 }
 function view(type) {
 	$("#contentFrame").attr("src",this[type+"Url"]);
-	if (type == 'lcat')
-	{
+	if (type == "lcat") {
 		$("#note").show("slow");
-	}
-	else
-	{
+	} else {
 		$("#note").hide();
 	}
 }
