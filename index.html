@@ -29,7 +29,7 @@ function loadProb(probdata) {
 	probid = probdata.pid;
 	
 	uvaUrl = "https://onlinejudge.org/external/"+probnum.substring(0,probnum.length-2)+"/"+probnum+".html";
-	if(hasLcat) lcatUrl = "http://luckycat.kshs.kh.edu.tw/homework/q"+probnum+".htm";
+	if(hasLcat) lcatUrl = "http://web.kshs.kh.edu.tw/academy/luckycat/homework/"+probnum+".htm";
 	lcat_mUrl = "http://www3.tcgs.tc.edu.tw/~sagit/luckycat/q"+probnum+".htm";
 	
 	$("#uva").attr("href","https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem="+probid);
